@@ -16,7 +16,7 @@
   --primary: rgba(154, 199, 91, 1);
   --secondary: rgba(85, 118, 44, 1);
   --white: rgba(255, 255, 255, 1);
-  --hero--section: rgba(45, 62, 79, 1);
+  --hero: rgba(45, 62, 79, 1);
   --hero--title: rgba(58, 153, 216, 1);
   --medium-blue: rgba(67, 156, 207, 1);
   --light-blue: rgba(72, 157, 205, 1);
@@ -36,6 +36,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: var(--base-font);
 }
 
 /* 폰트 위계 */
@@ -77,4 +78,44 @@ body {
 .btn-primary{
   background: var(--primary);
   color: var(--secondary);
+}
+
+/* 폼 요소 */
+.hero{
+  background: var(--hero);
+}
+form{
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.field{
+  height: calc(var(--base-unit) * 2);
+  background: var(--white);
+  border-radius: 3px;
+  padding: 0 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--light--gray);
+}
+form .field input{
+  color: var(--black);
+}
+form .field input::placeholder{
+  font-style: italic;
+  color: var(--super--light--gray);
+}
+form button{
+  height: calc(var(--base-unit) * 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--white);
+  border-radius: 3px;
+  font-size: calc(var(--base-font) * 1.125);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: bold;
 }
