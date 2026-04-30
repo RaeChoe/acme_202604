@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SignIn - ACME</title>
+    <title>SignUp - ACME</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,8 +29,14 @@
     <main>
       <section class="hero inner-pd">
         <div class="container d-flex flex-column align-items-center g-1">
-          <h2 class="text-heading-xl">sign in</h2>
+          <h2 class="text-heading-xl">create your free account</h2>
           <form action="">
+            <div class="field">
+              <label for="username">
+                <span class="material-icons">person</span>
+              </label>
+              <input type="text" id="username" placeholder="Name" />
+            </div>
             <div class="field">
               <label for="usermail">
                 <span class="material-icons">email</span>
@@ -43,18 +49,20 @@
               </label>
               <input type="text" id="userpw" placeholder="Password" />
             </div>
-            <button type="submit">sign in</button>
+            <div class="field">
+              <label for="userpwcf">
+                <span class="material-icons">lock</span>
+              </label>
+              <input type="text" id="userpwcf" placeholder="Confirm password" />
+            </div>
+            <button type="submit">create account</button>
           </form>
           <a href="" class="text-link">I forgot my password</a>
         </div>
       </section>
     </main>
     <footer class="inner-pd d-flex flex-column align-items-center g-2">
-      <div class="content d-flex flex-column g-1">
-        <h3 class="text-body-l">Don't have an account yet?</h3>
-        <p class="text-body-m-plus">Create one now.</p>
-      </div>
-      <a href="#" class="btn btn-primary big">sign up for free</a>
+      <a href="#" class="text-link">Already have an account? Sign in</a>
     </footer>
   </body>
 </html>
