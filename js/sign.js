@@ -12,7 +12,7 @@ form.addEventListener("submit", e => {
   for (let input of inputs) {
     if (!input.value) {
       input.focus();
-      let pos = input.offsetTop;
+      let pos = input.parentElement.offsetTop;
       let msg = `${input.getAttribute("id")}는 필수입니다.`;
       openFeedback(pos, msg);
     } else {
